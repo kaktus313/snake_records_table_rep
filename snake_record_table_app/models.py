@@ -7,6 +7,7 @@ class RecordManager(models.Manager):
 class Record(models.Model):
     player_name = models.CharField(max_length=30)
     score = models.SmallIntegerField()
+    joke_comment = models.CharField(max_length=100)
 
     objects = RecordManager()
 

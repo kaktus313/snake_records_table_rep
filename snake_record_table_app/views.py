@@ -19,6 +19,7 @@ def record_list(request):
         element_record = SubElement(root, "record")
         element_record.set('player_name', record['player_name'])
         element_record.set('score', str(record['score']))
+        element_record.set('joke_comment', record['joke_comment'])
 
     rough_string = ElementTree.tostring(root, 'utf-8')
     reparsed = minidom.parseString(rough_string)
